@@ -1,0 +1,408 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Rebot 6.0.2 (Python 3.11.3 on win32)" generated="20230511 10:03:00.974" rpa="false" schemaversion="3">
+<suite id="s1" name="Suites">
+<suite id="s1-s1" name="AddToCartTests" source="E:\RobotFramework-Selenium-demoproject\TestSuite\AddToCartTests.robot">
+<test id="s1-s1-t1" name="Test Add to Cart" line="10">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://demo.nopcommerce.com</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230511 10:02:38.256" level="INFO">Opening browser 'chrome' to base url 'https://demo.nopcommerce.com'.</msg>
+<status status="PASS" starttime="20230511 10:02:38.255" endtime="20230511 10:02:44.234"/>
+</kw>
+<kw name="Search for item" library="SearchItemKeywords">
+<arg>Apple MacBook Pro 13-inch</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${txt_searchField}</arg>
+<arg>${itemForSearch}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230511 10:02:44.238" level="INFO">Typing text 'Apple MacBook Pro 13-inch' into text field 'xpath://input[@id='small-searchterms']'.</msg>
+<status status="PASS" starttime="20230511 10:02:44.236" endtime="20230511 10:02:44.466"/>
+</kw>
+<status status="PASS" starttime="20230511 10:02:44.235" endtime="20230511 10:02:44.466"/>
+</kw>
+<kw name="Click Search Button" library="SearchItemKeywords">
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${btn_search}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230511 10:02:44.467" level="INFO">Clicking button 'xpath://button[contains(text(),'Search')]'.</msg>
+<status status="PASS" starttime="20230511 10:02:44.466" endtime="20230511 10:02:45.801"/>
+</kw>
+<status status="PASS" starttime="20230511 10:02:44.466" endtime="20230511 10:02:45.802"/>
+</kw>
+<kw name="Scroll down into view element" library="AddToCartKeywords">
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>${btn_addToCart}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" starttime="20230511 10:02:45.803" endtime="20230511 10:02:46.150"/>
+</kw>
+<status status="PASS" starttime="20230511 10:02:45.802" endtime="20230511 10:02:46.150"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2 seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230511 10:02:48.151" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230511 10:02:46.150" endtime="20230511 10:02:48.151"/>
+</kw>
+<kw name="Click add to cart" library="AddToCartKeywords">
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${btn_addToCart}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230511 10:02:48.156" level="INFO">Clicking button 'xpath://button[contains(text(),'Add to cart')]'.</msg>
+<status status="PASS" starttime="20230511 10:02:48.153" endtime="20230511 10:02:48.252"/>
+</kw>
+<status status="PASS" starttime="20230511 10:02:48.152" endtime="20230511 10:02:48.253"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2 seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230511 10:02:50.253" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230511 10:02:48.253" endtime="20230511 10:02:50.253"/>
+</kw>
+<kw name="Confirm add to cart" library="AddToCartKeywords">
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>${btn_confirmAddToCart}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" starttime="20230511 10:02:50.254" endtime="20230511 10:02:51.174"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${btn_confirmAddToCart}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230511 10:02:51.175" level="INFO">Clicking button 'xpath://button[@id='add-to-cart-button-4']'.</msg>
+<status status="PASS" starttime="20230511 10:02:51.175" endtime="20230511 10:02:51.251"/>
+</kw>
+<status status="PASS" starttime="20230511 10:02:50.253" endtime="20230511 10:02:51.251"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3 seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230511 10:02:54.253" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20230511 10:02:51.252" endtime="20230511 10:02:54.253"/>
+</kw>
+<kw name="Check item added successfully" library="AddToCartKeywords">
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>${txt_itemAddedSuccessfully}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20230511 10:02:54.269" level="INFO">Current page contains element 'xpath://p[@class='content']'.</msg>
+<status status="PASS" starttime="20230511 10:02:54.254" endtime="20230511 10:02:54.269"/>
+</kw>
+<status status="PASS" starttime="20230511 10:02:54.253" endtime="20230511 10:02:54.269"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20230511 10:02:54.269" endtime="20230511 10:02:56.460"/>
+</kw>
+<status status="PASS" starttime="20230511 10:02:38.254" endtime="20230511 10:02:56.461"/>
+</test>
+<status status="PASS" starttime="20230511 10:02:37.907" endtime="20230511 10:02:56.463"/>
+</suite>
+<suite id="s1-s2" name="BaseTests" source="E:\RobotFramework-Selenium-demoproject\TestSuite\BaseTests.robot">
+<kw name="Open Browser" library="SeleniumLibrary" type="SETUP">
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230511 10:02:38.266" level="INFO">Opening browser 'chrome' to base url 'https://demo.nopcommerce.com'.</msg>
+<status status="PASS" starttime="20230511 10:02:38.265" endtime="20230511 10:02:43.902"/>
+</kw>
+<test id="s1-s2-t1" name="Test Greeting Message" line="14">
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${txt_greetingMessage}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20230511 10:02:44.007" level="INFO">Element 'css:.topic-block-title h2' is displayed.</msg>
+<status status="PASS" starttime="20230511 10:02:43.904" endtime="20230511 10:02:44.008"/>
+</kw>
+<tag>smoke</tag>
+<status status="PASS" starttime="20230511 10:02:43.903" endtime="20230511 10:02:44.009"/>
+</test>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20230511 10:02:44.011" endtime="20230511 10:02:46.351"/>
+</kw>
+<status status="PASS" starttime="20230511 10:02:37.906" endtime="20230511 10:02:46.351"/>
+</suite>
+<suite id="s1-s3" name="LoginTests" source="E:\RobotFramework-Selenium-demoproject\TestSuite\LoginTests.robot">
+<test id="s1-s3-t1" name="Test Login" line="12">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://demo.nopcommerce.com</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230511 10:02:38.272" level="INFO">Opening browser 'chrome' to base url 'https://demo.nopcommerce.com'.</msg>
+<status status="PASS" starttime="20230511 10:02:38.271" endtime="20230511 10:02:43.662"/>
+</kw>
+<kw name="Click login Link" library="LoginKeywords">
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>${txt_loginLink}</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20230511 10:02:43.665" level="INFO">Clicking link 'link:Log in'.</msg>
+<status status="PASS" starttime="20230511 10:02:43.664" endtime="20230511 10:02:45.000"/>
+</kw>
+<status status="PASS" starttime="20230511 10:02:43.663" endtime="20230511 10:02:45.001"/>
+</kw>
+<kw name="Enter Email" library="LoginKeywords">
+<arg>${email}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${txt_loginEmail}</arg>
+<arg>${email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230511 10:02:45.004" level="INFO">Typing text 'moamen.darwish@gmail.com' into text field 'id:Email'.</msg>
+<status status="PASS" starttime="20230511 10:02:45.002" endtime="20230511 10:02:45.161"/>
+</kw>
+<status status="PASS" starttime="20230511 10:02:45.001" endtime="20230511 10:02:45.161"/>
+</kw>
+<kw name="Enter Password" library="LoginKeywords">
+<arg>${password}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${txt_loginPassword}</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230511 10:02:45.164" level="INFO">Typing text 'Test123!' into text field 'id:Password'.</msg>
+<status status="PASS" starttime="20230511 10:02:45.163" endtime="20230511 10:02:45.282"/>
+</kw>
+<status status="PASS" starttime="20230511 10:02:45.162" endtime="20230511 10:02:45.283"/>
+</kw>
+<kw name="Click Login Button" library="LoginKeywords">
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${btn_logIn}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230511 10:02:45.284" level="INFO">Clicking button 'xpath://button[contains(text(),'Log in')]'.</msg>
+<status status="PASS" starttime="20230511 10:02:45.283" endtime="20230511 10:02:46.004"/>
+</kw>
+<status status="PASS" starttime="20230511 10:02:45.283" endtime="20230511 10:02:46.005"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3</arg>
+<arg>seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230511 10:02:49.006" level="INFO">Slept 3 seconds</msg>
+<msg timestamp="20230511 10:02:49.006" level="INFO">seconds</msg>
+<status status="PASS" starttime="20230511 10:02:46.005" endtime="20230511 10:02:49.006"/>
+</kw>
+<kw name="Verify Successfull Login" library="LoginKeywords">
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${txt_myAccount}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20230511 10:02:49.182" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="2-selenium-screenshot-1.png"&gt;&lt;img src="2-selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20230511 10:02:49.183" level="FAIL">Element with locator 'xpath://a[contains(text() , 'My account')] [@class = 'ico-account']' not found.</msg>
+<status status="FAIL" starttime="20230511 10:02:49.007" endtime="20230511 10:02:49.185"/>
+</kw>
+<status status="FAIL" starttime="20230511 10:02:49.006" endtime="20230511 10:02:49.186"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="NOT RUN" starttime="20230511 10:02:49.187" endtime="20230511 10:02:49.187"/>
+</kw>
+<tag>smoke</tag>
+<status status="FAIL" starttime="20230511 10:02:38.269" endtime="20230511 10:02:49.187">Element with locator 'xpath://a[contains(text() , 'My account')] [@class = 'ico-account']' not found.</status>
+</test>
+<status status="FAIL" starttime="20230511 10:02:37.924" endtime="20230511 10:02:49.344"/>
+</suite>
+<suite id="s1-s4" name="RegisterTests" source="E:\RobotFramework-Selenium-demoproject\TestSuite\RegisterTests.robot">
+<test id="s1-s4-t1" name="Test Add New User" line="7">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://demo.nopcommerce.com</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230511 10:02:38.267" level="INFO">Opening browser 'chrome' to base url 'https://demo.nopcommerce.com'.</msg>
+<status status="PASS" starttime="20230511 10:02:38.266" endtime="20230511 10:02:43.469"/>
+</kw>
+<kw name="Click register Link" library="RegisterKeywords">
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>${txt_registerLink}</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20230511 10:02:43.473" level="INFO">Clicking link 'link:Register'.</msg>
+<status status="PASS" starttime="20230511 10:02:43.471" endtime="20230511 10:02:44.903"/>
+</kw>
+<status status="PASS" starttime="20230511 10:02:43.470" endtime="20230511 10:02:44.904"/>
+</kw>
+<kw name="Select Gender" library="RegisterKeywords">
+<arg>M</arg>
+<kw name="Select Radio Button" library="SeleniumLibrary">
+<arg>Gender</arg>
+<arg>${genderType}</arg>
+<doc>Sets the radio button group ``group_name`` to ``value``.</doc>
+<msg timestamp="20230511 10:02:44.905" level="INFO">Selecting 'M' from radio button 'Gender'.</msg>
+<status status="PASS" starttime="20230511 10:02:44.905" endtime="20230511 10:02:45.039"/>
+</kw>
+<status status="PASS" starttime="20230511 10:02:44.904" endtime="20230511 10:02:45.040"/>
+</kw>
+<kw name="Enter First Name" library="RegisterKeywords">
+<arg>momen</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${txt_registerFirstName}</arg>
+<arg>${firstName}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230511 10:02:45.045" level="INFO">Typing text 'momen' into text field 'id:FirstName'.</msg>
+<status status="PASS" starttime="20230511 10:02:45.042" endtime="20230511 10:02:45.168"/>
+</kw>
+<status status="PASS" starttime="20230511 10:02:45.040" endtime="20230511 10:02:45.169"/>
+</kw>
+<kw name="Enter Last Name" library="RegisterKeywords">
+<arg>adel</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${txt_registerLastName}</arg>
+<arg>${lastName}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230511 10:02:45.170" level="INFO">Typing text 'adel' into text field 'id:LastName'.</msg>
+<status status="PASS" starttime="20230511 10:02:45.169" endtime="20230511 10:02:45.282"/>
+</kw>
+<status status="PASS" starttime="20230511 10:02:45.169" endtime="20230511 10:02:45.282"/>
+</kw>
+<kw name="Select Date Of Birth" library="RegisterKeywords">
+<arg>8</arg>
+<arg>March</arg>
+<arg>1998</arg>
+<kw name="Select From List By Value" library="SeleniumLibrary">
+<arg>${txt_dateOfBirthDay}</arg>
+<arg>${dayOfBirth}</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<msg timestamp="20230511 10:02:45.284" level="INFO">Selecting options from selection list 'name:DateOfBirthDay' by value 8.</msg>
+<status status="PASS" starttime="20230511 10:02:45.283" endtime="20230511 10:02:45.488"/>
+</kw>
+<kw name="Select From List By Label" library="SeleniumLibrary">
+<arg>${txt_dateOfBirthMonth}</arg>
+<arg>${monthOfBirth}</arg>
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<msg timestamp="20230511 10:02:45.490" level="INFO">Selecting options from selection list 'name:DateOfBirthMonth' by label March.</msg>
+<status status="PASS" starttime="20230511 10:02:45.488" endtime="20230511 10:02:45.689"/>
+</kw>
+<kw name="Select From List By Value" library="SeleniumLibrary">
+<arg>${txt_dateOfBirthYear}</arg>
+<arg>${yearOFBirth}</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<msg timestamp="20230511 10:02:45.692" level="INFO">Selecting options from selection list 'name:DateOfBirthYear' by value 1998.</msg>
+<status status="PASS" starttime="20230511 10:02:45.690" endtime="20230511 10:02:45.992"/>
+</kw>
+<status status="PASS" starttime="20230511 10:02:45.283" endtime="20230511 10:02:45.993"/>
+</kw>
+<kw name="Enter Email" library="RegisterKeywords">
+<arg>momenn.darwish@gmail.com</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${txt_registerEmail}</arg>
+<arg>${email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230511 10:02:45.996" level="INFO">Typing text 'momenn.darwish@gmail.com' into text field 'id:Email'.</msg>
+<status status="PASS" starttime="20230511 10:02:45.995" endtime="20230511 10:02:46.130"/>
+</kw>
+<status status="PASS" starttime="20230511 10:02:45.994" endtime="20230511 10:02:46.130"/>
+</kw>
+<kw name="Enter Password" library="RegisterKeywords">
+<arg>Test123!</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${txt_registerPassword}</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230511 10:02:46.131" level="INFO">Typing text 'Test123!' into text field 'id:Password'.</msg>
+<status status="PASS" starttime="20230511 10:02:46.130" endtime="20230511 10:02:46.228"/>
+</kw>
+<status status="PASS" starttime="20230511 10:02:46.130" endtime="20230511 10:02:46.229"/>
+</kw>
+<kw name="Enter Confirm Password" library="RegisterKeywords">
+<arg>Test123!</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${txt_registerConfirmPassword}</arg>
+<arg>${confirmPassword}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230511 10:02:46.231" level="INFO">Typing text 'Test123!' into text field 'id:ConfirmPassword'.</msg>
+<status status="PASS" starttime="20230511 10:02:46.230" endtime="20230511 10:02:46.334"/>
+</kw>
+<status status="PASS" starttime="20230511 10:02:46.229" endtime="20230511 10:02:46.334"/>
+</kw>
+<kw name="Click Register Button" library="RegisterKeywords">
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${btn_register}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230511 10:02:46.335" level="INFO">Clicking button 'id:register-button'.</msg>
+<status status="PASS" starttime="20230511 10:02:46.335" endtime="20230511 10:02:47.088"/>
+</kw>
+<status status="PASS" starttime="20230511 10:02:46.334" endtime="20230511 10:02:47.088"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3</arg>
+<arg>seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230511 10:02:50.090" level="INFO">Slept 3 seconds</msg>
+<msg timestamp="20230511 10:02:50.090" level="INFO">seconds</msg>
+<status status="PASS" starttime="20230511 10:02:47.088" endtime="20230511 10:02:50.090"/>
+</kw>
+<kw name="Check Successfull Regsister And Continue" library="RegisterKeywords">
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${btn_continue}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20230511 10:02:50.131" level="INFO">Element 'xpath://a[contains(text(),'Continue')]' is displayed.</msg>
+<status status="PASS" starttime="20230511 10:02:50.090" endtime="20230511 10:02:50.131"/>
+</kw>
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>${btn_continue}</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20230511 10:02:50.132" level="INFO">Clicking link 'xpath://a[contains(text(),'Continue')]'.</msg>
+<status status="PASS" starttime="20230511 10:02:50.131" endtime="20230511 10:02:50.716"/>
+</kw>
+<status status="PASS" starttime="20230511 10:02:50.090" endtime="20230511 10:02:50.717"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20230511 10:02:50.717" endtime="20230511 10:02:52.931"/>
+</kw>
+<status status="PASS" starttime="20230511 10:02:38.265" endtime="20230511 10:02:52.931"/>
+</test>
+<status status="PASS" starttime="20230511 10:02:37.919" endtime="20230511 10:02:52.932"/>
+</suite>
+<suite id="s1-s5" name="SearchTests" source="E:\RobotFramework-Selenium-demoproject\TestSuite\SearchTests.robot">
+<test id="s1-s5-t1" name="Test Search Item" line="9">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://demo.nopcommerce.com</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230511 10:02:38.328" level="INFO">Opening browser 'chrome' to base url 'https://demo.nopcommerce.com'.</msg>
+<status status="PASS" starttime="20230511 10:02:38.326" endtime="20230511 10:02:44.122"/>
+</kw>
+<kw name="Search for item" library="SearchItemKeywords">
+<arg>Apple MacBook Pro 13-inch</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${txt_searchField}</arg>
+<arg>${itemForSearch}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230511 10:02:44.135" level="INFO">Typing text 'Apple MacBook Pro 13-inch' into text field 'xpath://input[@id='small-searchterms']'.</msg>
+<status status="PASS" starttime="20230511 10:02:44.129" endtime="20230511 10:02:44.372"/>
+</kw>
+<status status="PASS" starttime="20230511 10:02:44.123" endtime="20230511 10:02:44.372"/>
+</kw>
+<kw name="Click Search Button" library="SearchItemKeywords">
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${btn_search}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230511 10:02:44.374" level="INFO">Clicking button 'xpath://button[contains(text(),'Search')]'.</msg>
+<status status="PASS" starttime="20230511 10:02:44.373" endtime="20230511 10:02:45.667"/>
+</kw>
+<status status="PASS" starttime="20230511 10:02:44.372" endtime="20230511 10:02:45.669"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20230511 10:02:45.670" endtime="20230511 10:02:48.047"/>
+</kw>
+<status status="PASS" starttime="20230511 10:02:38.315" endtime="20230511 10:02:48.048"/>
+</test>
+<status status="PASS" starttime="20230511 10:02:37.943" endtime="20230511 10:02:48.050"/>
+</suite>
+<doc>[https://pabot.org/?ref=log|Pabot] result from 5 executions.</doc>
+<status status="FAIL" starttime="20230511 10:02:37.870" endtime="20230511 10:02:56.466"/>
+</suite>
+<statistics>
+<total>
+<stat pass="4" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="1" skip="0">smoke</stat>
+</tag>
+<suite>
+<stat pass="4" fail="1" skip="0" id="s1" name="Suites">Suites</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1" name="AddToCartTests">Suites.AddToCartTests</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s2" name="BaseTests">Suites.BaseTests</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s3" name="LoginTests">Suites.LoginTests</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s4" name="RegisterTests">Suites.RegisterTests</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s5" name="SearchTests">Suites.SearchTests</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
